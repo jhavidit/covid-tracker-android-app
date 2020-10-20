@@ -39,7 +39,7 @@ class NotificationWorker(val context: Context, workerParameters: WorkerParameter
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         val pendingIntent = PendingIntent.getActivity(
             context, 0, intent,
-            PendingIntent.FLAG_ONE_SHOT
+            PendingIntent.FLAG_UPDATE_CURRENT
         )
         val channelId = "default"
         val channelName = "Covid Tracker"

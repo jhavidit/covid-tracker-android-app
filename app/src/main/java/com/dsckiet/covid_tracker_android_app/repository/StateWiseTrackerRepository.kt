@@ -44,8 +44,8 @@ class StateWiseTrackerRepository(val application: Application) {
                 if (response.body()?.casesTimeSeries != null) {
                     showCoronaIndiaLineChart.value = response.body()!!.casesTimeSeries
                 }
-                activeIndia = response.body()!!.statewise[0].active
-                lastUpdated = response.body()!!.statewise[0].lastupdatedtime
+                activeIndia = response.body()?.statewise?.get(0)?.active
+                lastUpdated = response.body()?.statewise?.get(0)?.lastupdatedtime
             }
 
         })

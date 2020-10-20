@@ -8,31 +8,32 @@ import kotlinx.android.parcel.Parcelize
 data class StateWiseData
     (
     @Json(name = "cases_time_series")
-    val casesTimeSeries: List<CasesTimeSery>,
-    val statewise: List<Statewise>
+    val casesTimeSeries: List<CasesTimeSery>?=null,
+    val statewise: List<Statewise>?=null
 ) : Parcelable
 
 @Parcelize
 data class Statewise(
-    val active: String,
-    val confirmed: String,
-    val deaths: String,
-    val deltaconfirmed: String,
-    val deltadeaths: String,
-    val deltarecovered: String,
-    val lastupdatedtime: String,
-    val recovered: String,
-    val state: String,
-    val statecode: String
+    val active: String="",
+    val confirmed: String="",
+    val deaths: String="",
+    val deltaconfirmed: String="",
+    val deltadeaths: String="",
+    val deltarecovered: String="",
+    val lastupdatedtime: String="",
+
+    val recovered: String="",
+    val state: String="",
+    val statecode: String=""
 ) : Parcelable
 
 @Parcelize
 data class CasesTimeSery(
-    val dailyconfirmed: String,
-    val dailydeceased: String,
-    val dailyrecovered: String,
-    val date: String,
-    val totalconfirmed: String,
-    val totaldeceased: String,
-    val totalrecovered: String
+    val dailyconfirmed: String="",
+    val dailydeceased: String="",
+    val dailyrecovered: String="",
+    val date: String="",
+    val totalconfirmed: String="",
+    val totaldeceased: String="",
+    val totalrecovered: String= ""
 ) : Parcelable

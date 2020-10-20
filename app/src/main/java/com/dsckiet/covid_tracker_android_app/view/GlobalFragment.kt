@@ -102,7 +102,7 @@ class GlobalFragment : Fragment() {
 
             val a: ArrayList<PieEntry> = ArrayList()
             val activeCases =
-                it.global.totalConfirmed - it.global.totalDeaths - it.global.totalRecovered
+                it.global?.totalConfirmed!! - it.global.totalDeaths!! - it.global.totalRecovered!!
             val colorFirst = this.let {
                 ContextCompat.getColor(
                     requireContext(),
@@ -173,7 +173,7 @@ class GlobalFragment : Fragment() {
             confirmed_arrow_number.text = stringToNumberFormat(it.global.newConfirmed.toString())
             rip_arrow_number.text = stringToNumberFormat(it.global.newDeaths.toString())
             recover_arrow_number.text = stringToNumberFormat(it.global.newRecovered.toString())
-            adapter.setCountryWiseTracker(it.countries)
+            adapter.setCountryWiseTracker(it.countries!!)
         })
     }
 }

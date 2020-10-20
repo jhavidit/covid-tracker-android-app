@@ -5,9 +5,9 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class DistrictWiseData(
-    val districtData: List<DistrictData>,
-    val statecode: String,
-    val state: String
+    val districtData: List<DistrictData>?=null,
+    val statecode: String="",
+    val state: String=""
 ) : Parcelable
 
 @Parcelize

@@ -61,7 +61,7 @@ class CountryListFragment : Fragment() {
 
             val lastUpdatedTime = "Last Updated " + getPeriod(globalTimeDateFormat(it.date)!!)
             last_updated.text = lastUpdatedTime
-            adapter.setCountryWiseTracker(it.countries)
+            adapter.setCountryWiseTracker(it.countries!!)
         })
     }
 
